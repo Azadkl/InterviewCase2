@@ -46,21 +46,21 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("Kurt türlerini girin (boşlukla yazınız):");
-        String[] arrItems = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+        System.out.println("Kurt türlerini girin (boşlukla yazınız):");//ekleme yaptım
+        String[] arrItems = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");//Değiştirdim
         List<Integer> arr = Arrays.stream(arrItems)
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
 
         int result = Result.uniqueWolfs(arr);
 
-        // Dosya yolunu doğrudan belirtin
+        //Değiştirdim
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("output.txt"));
 
         bufferedWriter.write(String.valueOf(result));
         bufferedWriter.newLine();
 
-        System.out.println("En çok tespit edilen en düşük ID: " + result);
+        System.out.println("En çok tespit edilen en düşük ID: " + result);//ekleme yaptım
 
         bufferedReader.close();
         bufferedWriter.close();
