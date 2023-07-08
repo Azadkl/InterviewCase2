@@ -2,7 +2,7 @@
 Kurt Problemi
 
 -Bu projede istenilenleri bana ayrılmış kısmı yapmaya çalıştım.
--Sizlerin bana hazır olarak verdiğiniz kodlarda biraz eklemeler yaptım sebebi her çalıştırdığımda o kod bloğunda hata veriyordu.
+-Sizlerin bana hazır olarak verdiğiniz kodlarda biraz eklemeler ve değişiklikler yaptım sebebi her çalıştırdığımda o kod bloğunda hata veriyordu.
 -Yazdığım kod parçasında turMap adında bir HashMap oluşturdum.Bu her bir kurtID nin tekrar sayısını tutmak için kullandım.
 -Burada yazdığım maxTur en yüksek tekrar sayısını tutuyor,minID ise en çok tekrar eden kurtID nin minimum değerini tutuyor.
 -for döngüsünde yapmak istediğim kurtIDsinin listesini dolaşmak arr.get(i) ile listrddeki i indeksine karşılık gelen kurtIDsini aldım ve değişkene atadım.
