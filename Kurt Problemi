@@ -12,30 +12,35 @@ import static java.util.stream.Collectors.toList;
 import java.util.HashMap; //Benim eklediklerim
 class Result {
     public static int uniqueWolfs(List<Integer> arr) {
-        // Gelistirmeyi bu alana yapiniz
-        Map<Integer,Integer>turMap = new HashMap<>();
+        // Geliştirmeyi bu alana yapınız
+        Map<Integer, Integer> turMap = new HashMap<>();
         int maxTur = 0;
-        int minID= Integer.MAX_VALUE;
+        int minID = Integer.MAX_VALUE;
 
-        //Dizinin boyutunu alma
-        for (int i = 0; i < arr.size(); i++){
+        // Listenin boyutunu alma
+        for (int i = 0; i < arr.size(); i++) {
             int kurtID = arr.get(i);
-            int tur = turMap.getOrDefault(kurtID , 0)+1;
-            //key&value
-            turMap.put(kurtID,tur);
+            int tur = turMap.getOrDefault(kurtID, 0) + 1;
+            // Key&Value
+            turMap.put(kurtID, tur);
+        }
 
-            if (tur>maxTur){
+        for (Map.Entry<Integer, Integer> entry : turMap.entrySet()) {
+            int kurtID = entry.getKey();
+            int tur = entry.getValue();
+
+            if (tur > maxTur) {
                 maxTur = tur;
                 minID = kurtID;
-            }
-            else if (tur == maxTur && kurtID<minID) {
-                minID=kurtID;
+            } else if (tur == maxTur && kurtID < minID) {
+                minID = kurtID;
             }
         }
 
         return minID;
     }
 }
+
 public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
